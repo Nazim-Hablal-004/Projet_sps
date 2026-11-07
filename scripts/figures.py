@@ -9,6 +9,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 
+SEUIL_MIN_VARIANTS = 10
+
 
 def lire_arguments():
     parser = argparse.ArgumentParser(description="Génère les figures à partir de stats.csv")
@@ -36,6 +38,31 @@ def figure_genes(df, outdir):
     print(f"Figure enregistrée : {chemin}")
 
 
+def figure_types(df, outdir):
+    """Figure 2 : proportion de pathogènes par type de mutation, sein vs ovaire."""
+    t = df[(df["section"] == "type_organe") & (df["organe"].isin(["sein", "ovaire"]))]
+    prop = t.pivot(index="categorie", columns="organe", values="proportion_pathogene")
+    effectifs = t.pivot(index="categorie", columns="organe", values="n_variants")
+
+    # on garde les types assez fréquents dans les deux organes
+    garder = effectifs[(effectifs["sein"] >= SEUIL_MIN_VARIANTS)
+                       & (effectifs["ovaire"] >= SEUIL_MIN_VARIANTS)].index
+    prop = prop.loc[garder].sort_values("sein", ascending=False)
+
+    prop[["sein", "ovaire"]].plot(kind="bar", figsize=(10, 5))
+    plt.xlabel("Type de mutation")
+    plt.ylabel("Proportion de variants pathogènes")
+    plt.title("Proportion de variants pathogènes par type de mutation : sein vs ovaire")
+    plt.xticks(rotation=30, ha="right")
+    plt.legend(title="Organe")
+    plt.tight_layout()
+
+    chemin = os.path.join(outdir, "figure2_types.png")
+    plt.savefig(chemin, dpi=150)
+    plt.close()
+    print(f"Figure enregistrée : {chemin}")
+
+
 def main():
     args = lire_arguments()
 
@@ -47,6 +74,7 @@ def main():
 
     df = pd.read_csv(args.input)
     figure_genes(df, args.outdir)
+    figure_types(df, args.outdir)
 
 
 if __name__ == "__main__":
