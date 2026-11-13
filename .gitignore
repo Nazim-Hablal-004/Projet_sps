@@ -1,0 +1,13 @@
+data/raw/
+*.gz
+*.md5
+data/clean/
+results/
+logs/
+*.log
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store
+Thumbs.db
