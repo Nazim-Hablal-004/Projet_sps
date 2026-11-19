@@ -1,0 +1,4 @@
+# Lance le pipeline chaque lundi à 03h00.
+# Remplacer /chemin/vers/Projet_sps par le dossier du projet avant d'installer :
+#   crontab cron/pipeline.cron     puis vérifier avec : crontab -l
+0 3 * * 1 cd /chemin/vers/Projet_sps && ./run.sh >> logs/cron.log 2>&1

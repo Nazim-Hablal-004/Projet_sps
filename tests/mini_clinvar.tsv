@@ -1,0 +1,21 @@
+VariationID	GeneSymbol	Type	ClinicalSignificance	PhenotypeList	Assembly	OriginSimple
+1001	BRCA1	single nucleotide variant	Pathogenic	Hereditary breast cancer	GRCh38	germline
+1001	BRCA1	single nucleotide variant	Pathogenic	Hereditary breast cancer	GRCh37	germline
+1002	BRCA2	Deletion	Pathogenic	Hereditary breast ovarian cancer syndrome	GRCh38	germline
+1003	BRCA2	Deletion	Likely pathogenic	Ovarian cancer	GRCh38	germline
+1004	PALB2	Duplication	Benign	Breast cancer	GRCh38	germline
+1005	BRCA1	single nucleotide variant	not provided	Breast cancer	GRCh38	germline
+1006	BRCA2	Deletion	-	Ovarian cancer	GRCh38	germline
+1007	BRCA2	Deletion	no classification provided	Ovarian cancer	GRCh38	germline
+1008	TP53	single nucleotide variant	Pathogenic	Breast cancer	GRCh38	germline
+1009	BRCA1	Duplication	Likely pathogenic	Ovarian dysgenesis	GRCh38	germline
+1010	BRCA2	single nucleotide variant	Benign	breast ovarian	GRCh38	germline
+1011	GRCH37ONLY	Deletion	Pathogenic	Breast cancer	GRCh37	germline
+1012	PALB2	single nucleotide variant	Uncertain significance	Breast cancer	GRCh38	germline
+1013	BRCA2	Deletion	Pathogenic	Ovarian cancer	GRCh38	germline
+1014	BRCA1	single nucleotide variant	Benign	breast	GRCh38	germline
+1015	BRCA1	Deletion	Pathogenic	Hereditary breast cancer	GRCh38	germline
+1016	BRCA1	Deletion	Pathogenic	Hereditary breast cancer	GRCh38	germline
+1017	BRCA1	Duplication	Pathogenic	Premature ovarian failure	GRCh38	germline
+1018	BRCA2	single nucleotide variant	Pathogenic	Ovarian cancer	GRCh38	somatic
+1019	BRCA2	single nucleotide variant	Pathogenic	Breast cancer; Ovarian cancer	GRCh38	germline

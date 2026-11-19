@@ -1,0 +1,23 @@
+DÉPÔT GIT DU PROJET « ENQUÊTE SUR UNE MALADIE »
+Groupe : HABLAL, INEZARENE, SEKAIMA, GAHFIF, ACHERIR
+
+Adresse du dépôt : https://github.com/Nazim-Hablal-004/Projet_sps
+
+Organisation du travail
+  Un dépôt commun, une branche par membre et par étape du pipeline.
+  Chacun a développé et testé sa partie sur sa branche ; le dossier remis
+  (Projet_Maladie) rassemble la version finale de toutes les parties.
+
+Branches
+  Branche          Membre                      Étape du pipeline
+  main             HABLAL Nazim                orchestration : run.sh, lib.sh, resume.py
+  P2-acquisition   GAHFIF Djihane              acquisition et intégrité des données
+  p3-filtrage      ACHERIR Ghilene             nettoyage et filtrage
+  P4-analyse       INEZARENE Hamed Abdelaziz   analyse statistique
+  P5-figures       SEKAIMA Toufik              figures, archivage, administration système
+
+Commits de référence (état du dépôt au 13/11/2026)
+  P2-acquisition   26a1b4e   05/11/2026   download.sh, check_data.py et SOURCES.md
+  P4-analyse       aa2ffe0   06/11/2026   quick_counts.sh, analyse.py et tests
+  P5-figures       3cd541c   13/11/2026   figures, archive, cron et section README
+  p3-filtrage      724c826   13/11/2026   filtre ClinVar corrigé et tests

@@ -1,0 +1,19 @@
+# Données : téléchargées par download.sh, jamais dans Git
+data/raw/*
+data/clean/*
+!data/raw/.gitkeep
+!data/clean/.gitkeep
+data/*.gz
+data/*.md5
+# Résultats et journaux : régénérés par ./run.sh
+results/*
+!results/.gitkeep
+logs/*
+!logs/.gitkeep
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+Thumbs.db
